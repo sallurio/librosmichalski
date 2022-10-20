@@ -1,85 +1,88 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from "@/components/HeaderComp.vue";
+import FooterComp from "@/components/FooterComp.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <HeaderComp />
+  <main>
+    <RouterView />
+  </main>
+  <FooterComp />
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+.form-input input {
+  width: 25%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  margin: 5px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.form-input button {
+  padding: 0.5rem;
+  width: 15%;
+  border: 1px solid #634832;
+  background-color: #634832;
+  font-weight: bold;
+  margin-left: 1px;
+  color: #38220f;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
+.form-input button:hover {
+  cursor: pointer;
+  background-color: #553f2d;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+}
+
+.lists input {
+  width: 15%;
+  padding: 0.5rem;
+  margin-left: 1px;
   text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.lists button {
+  padding: 0.5rem;
+  width: 20%;
+  border: 1px solid #634832;
+  background-color: #634832;
+  margin-left: 1px;
+  font-style: bold;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.lists button:hover {
+  cursor: pointer;
+  background-color: #553f2d;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-size: 1.1rem;
 }
 
-nav a:first-of-type {
-  border: 0;
+table thead {
+  background-color: #634832;
+  font-weight: bold;
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+table tbody tr {
+  text-align: center;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+table tbody tr:nth-child(odd) {
+  background-color: #967259;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.title {
+  text-align: center;
+  font-size: 35px;
 }
 </style>
