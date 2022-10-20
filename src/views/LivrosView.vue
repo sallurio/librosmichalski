@@ -22,7 +22,7 @@ export default {
       this.livro = {};
     },
     async excluir(livro) {
-      await livrosApi.excluirTime(livro.id);
+      await livrosApi.excluirLivro(livro.id);
       this.livros = await livrosApi.buscarTodosOsLivros();
     },
     editar(livro) {
@@ -51,8 +51,8 @@ export default {
         </thead>
         <tbody>
           <tr v-for="livro in livros" :key="livro.id">
-            <td>{% raw %}{{ livro.id }}{% endraw %}</td>
-            <td>{% raw %}{{ livro.nome }}{% endraw %}</td>
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.nome }}</td>
             <td>
               <button @click="editar(livro)">Editar</button>
               <button @click="excluir(livro)">Excluir</button>
