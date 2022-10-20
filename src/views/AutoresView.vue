@@ -37,7 +37,12 @@ export default {
       <h2>Gerenciamento de Autores</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="autor.nome" @keyup.enter="salvar" />
+      <input
+        type="text"
+        v-model="autor.nome"
+        @keyup.enter="salvar"
+        placeholder="Autor"
+      />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-items">

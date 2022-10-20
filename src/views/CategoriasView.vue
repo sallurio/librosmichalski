@@ -22,8 +22,8 @@ export default {
       this.categoria = {};
     },
     async excluir(categoria) {
-      await categoriasApi.excluircategoria(categoria.id);
-      this.categorias = await categoriasApi.buscarTodasAscategorias();
+      await categoriasApi.excluirCategoria(categoria.id);
+      this.categorias = await categoriasApi.buscarTodasAsCategorias();
     },
     editar(categoria) {
       Object.assign(this.categoria, categoria);
@@ -37,7 +37,12 @@ export default {
       <h2>Gerenciamento de Categorias</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="categoria.nome" @keyup.enter="salvar" />
+      <input
+        type="text"
+        v-model="categoria.nome"
+        @keyup.enter="salvar"
+        placeholder="Categoria"
+      />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-items">

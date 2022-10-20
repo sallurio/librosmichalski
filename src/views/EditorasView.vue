@@ -37,7 +37,12 @@ export default {
       <h2>Gerenciamento de Editoras</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="editora.nome" @keyup.enter="salvar" />
+      <input
+        type="text"
+        v-model="editora.nome"
+        @keyup.enter="salvar"
+        placeholder="Editora"
+      />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-items">

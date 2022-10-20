@@ -37,7 +37,12 @@ export default {
       <h2>Gerenciamento de Livros</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="livro.nome" @keyup.enter="salvar" />
+      <input
+        type="text"
+        v-model="livro.nome"
+        @keyup.enter="salvar"
+        placeholder="Livro"
+      />
       <button @click="salvar">Adicionar</button>
     </div>
     <div class="list-items">
