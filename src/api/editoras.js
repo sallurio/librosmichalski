@@ -1,6 +1,6 @@
 import axios from "axios";
 export default class EditorasApi {
-  async buscarTodosAsEditoras() {
+  async buscarTodasAsEditoras() {
     const response = await axios.get(
       "https://librosmichalski.herokuapp.com/editoras"
     );

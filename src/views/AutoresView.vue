@@ -5,11 +5,11 @@ export default {
   data() {
     return {
       autor: {},
-      autors: [],
+      autores: [],
     };
   },
   async created() {
-    this.autors = await autoresApi.buscarTodosOsAutores();
+    this.autores = await autoresApi.buscarTodosOsAutores();
   },
   methods: {
     async salvar() {
@@ -18,12 +18,12 @@ export default {
       } else {
         await autoresApi.adicionarAutor(this.autor);
       }
-      this.autors = await autoresApi.buscarTodosOsAutores();
+      this.autores = await autoresApi.buscarTodosOsAutores();
       this.autor = {};
     },
     async excluir(autor) {
       await autoresApi.excluirAutor(autor.id);
-      this.autors = await autoresApi.buscarTodosOsAutores();
+      this.autores = await autoresApi.buscarTodosOsAutores();
     },
     editar(autor) {
       Object.assign(this.autor, autor);

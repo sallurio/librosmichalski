@@ -1,6 +1,6 @@
 import axios from "axios";
 export default class CategoriasApi {
-  async buscarTodosAsCategorias() {
+  async buscarTodasAsCategorias() {
     const response = await axios.get(
       "https://librosmichalski.herokuapp.com/categorias"
     );

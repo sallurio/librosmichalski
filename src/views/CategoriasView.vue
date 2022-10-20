@@ -9,7 +9,7 @@ export default {
     };
   },
   async created() {
-    this.categorias = await categoriasApi.buscarTodosAsCategorias();
+    this.categorias = await categoriasApi.buscarTodasAsCategorias();
   },
   methods: {
     async salvar() {
@@ -18,12 +18,12 @@ export default {
       } else {
         await categoriasApi.adicionarCategoria(this.categoria);
       }
-      this.categorias = await categoriasApi.buscarTodosAsCategorias();
+      this.categorias = await categoriasApi.buscarTodasAsCategorias();
       this.categoria = {};
     },
     async excluir(categoria) {
       await categoriasApi.excluircategoria(categoria.id);
-      this.categorias = await categoriasApi.buscarTodosOscategorias();
+      this.categorias = await categoriasApi.buscarTodasAscategorias();
     },
     editar(categoria) {
       Object.assign(this.categoria, categoria);
