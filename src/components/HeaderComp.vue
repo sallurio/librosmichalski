@@ -23,7 +23,7 @@
     </div>
     <div class="menu-direito">
       <span>
-        <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Sair</a>
+        <a>Sair</a>
       </span>
     </div>
   </header>
